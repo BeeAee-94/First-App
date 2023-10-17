@@ -1,0 +1,106 @@
+# Pacific Racing tips calculator
+# Date: 17-10-2023
+# @author-Bee
+
+<MyPR>:
+    MDBoxLayout:
+        orientation: 'vertical'
+        size: root.size
+        padding: 10
+
+        # Header Section
+        MDBoxLayout:
+            orientation: 'horizontal'
+            size_hint: (0.5,0.6)
+            pos_hint: {'x': 0.25, 'y':0}
+            MDLabel:
+                text: 'Pacific Racing'
+                
+
+        # Middle Section
+            
+        MDGridLayout:
+            cols: 4
+            spacing: 10
+            size_hint:(1,0.3)
+            MDLabel:
+                text: 'Total (K) '
+
+            MDLabel:
+                text: '0.00'
+
+            MDLabel:
+                text: 'Game'
+                size_hint_x: None
+
+            MDLabel:
+                text: '0'
+                size_hint_x: None
+        
+        MDGridLayout:
+            cols: 2
+            spacing: 50
+            size_hint: (1,0.5)
+
+            MDTextField:
+                hint_text: 'Bet'
+                mode: 'fill'
+                multiline: False
+
+            MDTextField:
+                hint_text: 'Market'
+                mode: 'fill'
+                multiline: False 
+
+       # Button Section
+        MDGridLayout:
+            rows: 4
+            cols: 3
+            pos_hint: {'x': 0.15, 'y': 0.15}
+            size_hint:(1,1)
+
+            # row 1
+            MDRaisedButton:
+                text: '7'
+            MDRaisedButton:
+                text: '8'
+            MDRaisedButton:
+                text: '9'
+
+            # row 2
+            MDRaisedButton:
+                text: '4'
+            MDRaisedButton:
+                text: '5'
+            MDRaisedButton:
+                text: '6'
+
+            # row 3
+            MDRaisedButton:
+                text: '1'
+            MDRaisedButton:
+                text: '2'
+            MDRaisedButton:
+                text: '3'
+
+            # row 4
+            MDRaisedButton:
+                text: '0'
+            MDRaisedButton:
+                text: '.'
+            MDRaisedButton:
+                text: '<<'
+
+        # Buttons
+        MDBoxLayout:
+            orientation: 'horizontal'
+            padding: 10
+            pos_hint: {'x': 0.2, 'y': 0}
+
+            MDRaisedButton:
+                text: 'Calculate'
+
+            MDRaisedButton:
+                text: 'Reset'
+
+
